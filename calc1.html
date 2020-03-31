@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>  
+<html>    
+ 
+ <head>    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>    
+    <script>    
+       
+	   var sk1;
+	   var sk2;
+	   var rezultatas = 0;
+	       
+        $(document).ready(function(){  
+		
+            $("#sudeti").on('click',function(){    
+                sudeti();    
+            }); 
+				function sudeti(){    
+				sk1 = parseInt($("#pirmasSk").val());    
+				sk2 = parseInt($("#antrasSk").val());    
+				rezultatas = sk1 + sk2;    
+				alert("Atsakymas " +rezultatas);    
+				} 
+
+				
+            $("#atimti").on('click',function(){    
+                atimti();    
+            })
+				function atimti(){    
+				sk1 = parseInt($("#pirmasSk").val());    
+				sk2 = parseInt($("#antrasSk").val());    
+				rezultatas = sk1 - sk2;    
+				alert("Atsakymas " +rezultatas);    
+				} 
+			
+           
+        });    
+        
+          
+        
+          
+		function pakelti(){    
+        sk1=parseInt($("#pirmasSk").val()); 
+		sk2=parseInt($("#antrasSk").val());		
+        rezultatas
+        alert("Atsakymas "+rezultatas);  
+			
+        }    
+    </script>    
+    </head>    
+   <body>    
+       Pirmas skaičius <input type="text" id="pirmasSk" ><br><br>    
+        Antras skaičius <input type="text" id="antrasSk" ><br>
+	<div id = "klavisai">	
+		<input type="button" id="sudeti" value="&plus;">    
+        <input type="button" id="atimti" value="&minus;">    
+    </div>
+
+   </body>    
+ </html>   
