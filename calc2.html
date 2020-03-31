@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>  
+<html>    
+ <style>
+ .ekranas {
+  width: 280px;
+  height: 88px;
+  }
+ </style>
+ <head>    
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>    
+    <script>    
+       
+	   var sk1;
+	   var sk2;
+	   var rezultatas = 0;
+	       
+        $(document).ready(function(){  
+		
+            $("#sudeti").on('click',function(){    
+                sudeti();    
+            }); 
+				function sudeti(){    
+				sk1 = parseInt($("#pirmasSk").val());    
+				sk2 = parseInt($("#antrasSk").val());    
+				rezultatas = sk1 + sk2;    
+				alert("Atsakymas " +rezultatas);    
+				} 
+
+				
+            $("#atimti").on('click',function(){    
+                atimti();    
+            })
+				function atimti(){    
+				sk1 = parseInt($("#pirmasSk").val());    
+				sk2 = parseInt($("#antrasSk").val());    
+				rezultatas = sk1 - sk2;    
+				alert("Atsakymas " +rezultatas);    
+				} 
+			
+            $("#dauginti").on('click',function(){    
+                dauginti();    
+            }) 
+				function dauginti(){    
+				sk1 = parseInt($("#pirmasSk").val());    
+				sk2 = parseInt($("#antrasSk").val());    
+				rezultatas = sk1 * sk2;    
+				alert("Atsakymas " +rezultatas);    
+				} 
+
+				
+            $("#dalinti").on('click',function(){    
+                dalinti();    
+            }) 
+				function dalinti(){    
+				sk1 = parseInt($("#pirmasSk").val());    
+				sk2 = parseInt($("#antrasSk").val());    
+				rezultatas = sk1 / sk2;    
+				alert("Atsakymas "+rezultatas);    
+				} 
+									
+        });    
+        
+          
+        
+          
+		
+    </script>    
+    </head>    
+   <body>
+	<div class="ekranas" style="background-color:lightblue"> 
+       Pirmas skaičius <input type="text" id="pirmasSk" ><br><br>    
+        Antras skaičius <input type="text" id="antrasSk" ><br>
+		Įvędus skaičius, pasirinkti veiksmą.
+	</div>
+	<div class="div2" id = "klavisai">	
+		<input type="button" style="background-color:white; margin-left:280px; margin-right:auto; display:block; margin-top:-89px" id="sudeti" value="&plus;">    
+        <input type="button" style="background-color:white; margin-left:280px; margin-right:auto; display:block; margin-top:1px" id="atimti" value="&minus;">    
+        <input type="button" style="background-color:white; margin-left:280px; margin-right:auto; display:block; margin-top:1px" id="dauginti" value="&times;">    
+        <input type="button" style="background-color:white; margin-left:280px; margin-right:auto; display:block; margin-top:1px" id="dalinti" value="&divide;"> 
+		
+	</div>
+
+   </body>    
+ </html>   
